@@ -1,0 +1,73 @@
+<?php
+// Interface
+interface ShapeInterface {
+  public function getArea();
+}
+
+// Base class
+abstract class Shape implements ShapeInterface {
+  protected $color;
+
+  public function __construct($color = 'red') {
+    $this->color = $color;
+  }
+
+  public function getColor() {
+    return $this->color;
+  }
+}
+
+// Derived class
+class Square extends Shape {
+  protected $length = 4;
+
+  public function getArea() {
+    return pow($this->length, 2);
+  }
+}
+
+// Derived class
+class Circle extends Shape {
+  protected $radius = 5;
+
+  public function getArea() {
+    return pi() * pow($this->radius, 2);
+  }
+
+  public function setRadius($radius) {
+    $this->radius = $radius;
+  }
+}
+
+// Polymorphism
+class AreaCalculator {
+  protected $shapes;
+
+  public function __construct($shapes = array()) {
+    $this->shapes = $shapes;
+  }
+
+  public function sum() {
+    $area = array();
+
+    foreach ($this->shapes as $shape) {
+      if ($shape instanceof ShapeInterface) {
+        $area[] = $shape->getArea();
+      }
+    }
+
+    return array_sum($area);
+  }
+}
+
+// Encapsulation
+$circle = new Circle;
+$circle->setRadius(3);
+
+$square = new Square;
+
+$calculator = new AreaCalculator([$circle, $square]);
+$area = $calculator->sum();
+
+echo "The total area is: " . $area . "\n";
+?>

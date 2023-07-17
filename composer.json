@@ -1,0 +1,13 @@
+{
+    "name": "sonus/php",
+    "description": "hello",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ronak"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

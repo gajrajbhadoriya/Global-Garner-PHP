@@ -1,0 +1,25 @@
+{
+    "name": "jayde/nasa-api",
+    "description": "nasa api",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ronak"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/var-dumper": "6.3.x-dev"
+    },
+
+    "autoload" : {
+        "require": {
+            "guzzlehttp/guzzle": "^7.0"
+        },
+            "psr-4" : {
+                "App\\": "src/"
+            }
+        }
+}
+

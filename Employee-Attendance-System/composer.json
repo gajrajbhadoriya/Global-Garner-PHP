@@ -1,0 +1,19 @@
+{
+    "name": "jayde/employee-attendance-system",
+    "description": "employee",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ronak"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+
+    "autoload" : {
+        "psr-4" : {
+            "App\\": "src/"
+        }
+    }
+}

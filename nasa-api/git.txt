@@ -1,0 +1,102 @@
+# git init
+# git clone
+# git add
+# git remote add origin
+# git remote -v
+# git checkout
+# git switch
+# diff => git checkout, git switch
+# git --help
+# git config --list
+# git diff
+# git push
+# git push origin branch
+# git pull
+# git status
+# git branch
+# git branch --show-current
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Speed</th>
+      <th>Distance</th>
+      <th>Diameter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach ($speed as $asteroid) { ?>
+      <tr>
+        <td><?php echo $asteroid['id']; ?></td>
+        <td><?php echo $asteroid['name']; ?></td>
+        <td><?php echo $asteroid['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']; ?> km/h</td>
+        <td><?php echo $asteroid['close_approach_data'][0]['miss_distance']['kilometers']; ?> km</td>
+        <td><?php echo $asteroid['estimated_diameter']['kilometers']['estimated_diameter_max']; ?> km</td>
+      </tr>
+    <?php } ?>
+    <?php foreach ($near as $asteroid) { ?>
+      <tr>
+        <td><?php echo $asteroid['id']; ?></td>
+        <td><?php echo $asteroid['name']; ?></td>
+        <td><?php echo $asteroid['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']; ?> km/h</td>
+        <td><?php echo $asteroid['close_approach_data'][0]['miss_distance']['kilometers']; ?> km</td>
+        <td><?php echo $asteroid['estimated_diameter']['kilometers']['estimated_diameter_max']; ?> km</td>
+      </tr>
+    <?php } ?>
+    <?php foreach ($small as $asteroid) { ?>
+      <tr>
+        <td><?php echo $asteroid['id']; ?></td>
+        <td><?php echo $asteroid['name']; ?></td>
+        <td><?php echo $asteroid['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']; ?> km/h</td>
+        <td><?php echo $asteroid['close_approach_data'][0]['miss_distance']['kilometers']; ?> km</td>
+        <td><?php echo $asteroid['estimated_diameter']['kilometers']['estimated_diameter_max']; ?> km</td>
+      </tr>
+    <?php } ?>
+    <?php foreach ($large as $asteroid) { ?>
+      <tr>
+        <td><?php echo $asteroid['id']; ?></td>
+        <td><?php echo $asteroid['name']; ?></td>
+        <td><?php echo $asteroid['close_approach_data'][0]['relative_velocity']['kilometers_per_hour']; ?> km/h</td>
+        <td><?php echo $asteroid['close_approach_data'][0]['miss_distance']['kilometers']; ?> km</td>
+        <td><?php echo $asteroid['estimated_diameter']['kilometers']['estimated_diameter_max']; ?> km</td>
+      </tr>
+    <?php } ?>
+  </tbody>
+</table>

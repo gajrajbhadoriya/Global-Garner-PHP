@@ -1,0 +1,19 @@
+{
+    "name": "jayde/asteroid",
+    "description": "asteroid program",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dev"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+
+    "autoload" : {
+        "psr-4" : {
+            "App\\": "src/"
+        }
+    }
+}
